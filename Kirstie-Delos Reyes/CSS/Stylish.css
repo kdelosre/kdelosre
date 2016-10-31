@@ -1,0 +1,9 @@
+h3{
+	font-family: Verdana;
+	color: Violet;
+}
+
+body{
+	background: lightblue;
+	background: linear-gradient(lightblue, white);
+}
