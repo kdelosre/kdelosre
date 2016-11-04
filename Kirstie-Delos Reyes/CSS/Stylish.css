@@ -29,24 +29,49 @@ nav{
 	color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-size: 1em;
 }
 img{
 	width: 250px;
 	height: 250px;
 	border: 5px solid grey;
 }
-
-/*head{
+head{
 	display: block;
-}*/
+}
+
 
 /*Media Queries*/
-@media only screen and (max-width: 768x){
-	.query{
-		width: 100%;
+@media screen and (max-width: 600px){
+	img{
+		width: 200px;
+		height: 200px;
 	}
 }
 
-/*nav a {
-	padding: 50px,50px,50px,50px;
-}*/
+@media screen and (max-width: 525px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+	img{
+		width: 70%;
+		height: 70%;
+	}
+
+}
+@media screen and (max-width: 256px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+	img{
+		width: 50%;
+		height: 50%;
+	}
+	h1{
+		font: 10px;
+	}
+}
