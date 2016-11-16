@@ -63,6 +63,8 @@ exports.getMeetings = function(req, res) {
 	var status = req.param('status');
 	var start = req.param('start');
 	var end = req.param('end');
+	//var documents = req.param('documents');  //added
+	//var topics = req.param('topics');        //added
 	
 	db.collection('meetings', function(err, collection) {
 		collection.find().toArray(function(err, meetings) {
@@ -79,7 +81,10 @@ exports.getMeetings = function(req, res) {
 						"actStart": "",
 						"actEnd": "",
 						"room": 0,
-						"status": ""
+						"status": "",
+						"invitedUsers": [], //added
+						"documents": [],    //added
+						"topics": []       //added
 				};
 				
 				// find room match if specified
@@ -118,6 +123,9 @@ exports.getMeetings = function(req, res) {
 				smeeting.actEnd = meeting.actEnd;
 				smeeting.room = meeting.room;
 				smeeting.status = meeting.status;
+				smeeting.invitedUsers = meeting.invitedUsers;   //added
+				smeeting.documents = meeting.documents;         //added
+				smeeting.topics = meeting.topics;              //added
 				
 				smeetings.push(smeeting);
 			}
@@ -171,6 +179,7 @@ exports.getMeeting = function(req, res) {
 // create new meeting with entire meeting info (in json) passed from client
 exports.createMeeting = function(req, res) {
 	var meeting = req.body;
+	//console.log(req.body);  //test
 	db.collection('meetings', function(err, collection) {
 		console.log("in collection...");
 		collection.insert(meeting, {safe:true}, function(err, result) {
