@@ -3,11 +3,195 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:text="Third Layout"
+        android:text="Name"
+        android:textColor="#b30000"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView8"
+        android:layout_marginStart="15dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="87dp"
-        android:id="@+id/textView2" />
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:id="@+id/meetingName"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
+
+    <TextView
+        android:text="Description"
+        android:textColor="#b30000"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/meetingName"
+        android:layout_alignStart="@+id/meetingName" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:inputType="date"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:ems="10"
+        android:id="@+id/meetingDate"
+        android:layout_below="@+id/textView11"
+        android:layout_alignStart="@+id/textView11" />
+
+    <TextView
+        android:text="Date"
+        android:textColor="#b30000"
+        android:textSize="20dp"
+        android:onClick="onPickDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:layout_marginEnd="15dp"
+        android:layout_alignTop="@+id/meetingDate"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <TextView
+        android:text="Time"
+        android:textColor="#b30000"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText6"
+        android:layout_alignStart="@+id/editText6"
+        android:id="@+id/textView12" />
+
+    <TextView
+        android:text="Location"
+        android:textColor="#b30000"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/meetingDate"
+        android:id="@+id/textView13" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:ems="10"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:id="@+id/editText7" />
+
+    <TextView
+        android:text="Agendas"
+        android:textColor="#b30000"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText7"
+        android:layout_alignStart="@+id/editText7"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView14" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:ems="10"
+        android:layout_below="@+id/textView14"
+        android:layout_alignEnd="@+id/editText7"
+        android:id="@+id/editText8" />
+
+    <TextView
+        android:text="Upload Files"
+        android:textColor="#b30000"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText8"
+        android:layout_alignStart="@+id/editText8"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView15" />
+
+    <Button
+        android:text="Upload"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:id="@+id/button2" />
+
+    <TextView
+        android:text="Invite Members"
+        android:textColor="#b30000"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView16" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#750606"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_below="@+id/textView16"
+        android:layout_alignStart="@+id/textView16"
+        android:id="@+id/editText9" />
+
+    <Button
+        android:text="Create  Meeting"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textColor="#FFFFFF"
+        android:background="#b30000"
+        android:layout_alignTop="@+id/editText9"
+        android:layout_toEndOf="@+id/meetingDate"
+        android:id="@+id/button4" />
+
+
 </RelativeLayout>

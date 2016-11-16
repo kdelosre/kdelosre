@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -105,4 +106,20 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void onCreateMeetingClick(View v) {
+
+        if (v.getId() == R.id.createMeeting) {
+            FragmentManager fm = getFragmentManager();
+            fm.beginTransaction()
+                    .replace(R.id.content_frame
+                            , new CreateMeeting())
+                    .commit();
+        }
+    }
+
+    //on click pop up date picker
+//    public void onPickDate() {
+//
+//    }
 }

@@ -12,16 +12,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.izaya.smartoffice.Login">
 
-    <ImageView
+
+    <TextView
+        android:text="No account? Create one."
+        android:textSize="14dp"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/smartlogo"
-        android:id="@+id/imageView2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/textView5"
+        android:textColor="#750606"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userLogin"
+        android:onClick="onLoginClick"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:background="#b30000"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
@@ -31,35 +48,11 @@
         android:id="@+id/editText4"
         android:textColor="#FFFFFF"
         android:background="#750606"
-        android:layout_below="@+id/email"
-        android:layout_alignStart="@+id/userLogin"
-        android:layout_marginTop="20dp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/userLogin"
-        android:onClick="onLoginClick"
-        android:text="Login"
-        android:textColor="#FFFFFF"
-        android:background="#b30000"
-        android:layout_below="@+id/editText4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
-
-    <TextView
-        android:text="SMART OFFICE ASSISTANT"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textSize="28sp"
-        android:textColor="#b30000"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="1000dp"
+        android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:inputType="textEmailAddress"
         android:ems="10"
@@ -69,20 +62,30 @@
         android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
         android:background="#750606"
-        android:layout_marginTop="51dp"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/editText4"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp" />
 
     <TextView
-        android:text="No account? Create one."
+        android:text="SMART OFFICE ASSISTANT"
         android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="28sp"
+        android:textColor="#b30000"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:textColor="#750606"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp" />
+        app:srcCompat="@drawable/smartlogo"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

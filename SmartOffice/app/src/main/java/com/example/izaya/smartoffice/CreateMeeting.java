@@ -21,4 +21,5 @@ public class CreateMeeting extends Fragment {
         myView = inflater.inflate(R.layout.create_meeting_layout, container, false);
         return myView;
     }
+
 }

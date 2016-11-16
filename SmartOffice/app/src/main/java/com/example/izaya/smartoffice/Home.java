@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 /**
  * Created by Izaya on 11/11/2016.
  */
@@ -23,11 +24,16 @@ public class Home extends Fragment {
         return myView;
     }
 
-    public void onCreateMeetingClick() {
-        FragmentManager fm = getFragmentManager();
-        fm.beginTransaction()
-                .replace(R.id.content_frame
-                        , new Home())
-                .commit();
-    }
+//    public void onCreateMeeting(View v) {
+//
+//        if (v.getId() == R.id.createMeeting) {
+//            FragmentManager fm = getFragmentManager();
+//            fm.beginTransaction()
+//                    .replace(R.id.nav_home_layout
+//                            , new CreateMeeting())
+//                    .commit();
+//        }
+//    }
+
+
 }
