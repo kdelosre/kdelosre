@@ -4,9 +4,6 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.text.format.DateFormat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,11 +15,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.app.FragmentManager;
 import android.widget.DatePicker;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
-import java.util.Date;
 
 
 public class MainActivity extends AppCompatActivity
@@ -44,10 +41,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentManager fm = getFragmentManager();
-        fm.beginTransaction()
-                .replace(R.id.content_frame
-                        , new Home())
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, new Home())
                 .commit();
     }
 
@@ -92,15 +87,13 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getFragmentManager();
 
         if (id == R.id.nav_home_layout) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame
-                            , new Home())
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new Home())
                     .commit();
 
         } else if (id == R.id.nav_second_layout) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame
-                            , new SecondFragment())
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new SecondFragment())
                     .commit();
 
         } else if (id == R.id.logout) {
@@ -119,28 +112,18 @@ public class MainActivity extends AppCompatActivity
     public void onCreateMeetingClick(View v) {
 
         if (v.getId() == R.id.createMeeting) {
-            FragmentManager fm = getFragmentManager();
-            fm.beginTransaction()
-                    .replace(R.id.content_frame
-                            , new CreateMeeting())
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new CreateMeeting())
                     .commit();
         }
     }
 
     public void onCreateDashboardClick(View v) {
         if (v.getId() == R.id.createDashboard) {
-            FragmentManager fm = getFragmentManager();
-            fm.beginTransaction()
-                    .replace(R.id.content_frame
-                            , new CreateMeetingDashboard())
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new MeetingDashboard())
                     .commit();
-            // for v4 version of fragment
-//            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.content_frame, new CreateMeetingDashboard())
-//                    .commit();
-//        }
         }
-
     }
 
     //on click pop up date picker
@@ -217,6 +200,14 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    public void onTopicExpandClick(View v) {
+        if (v.getId() == R.id.ExpList) {
+
+            ExpandableListView expListView = (ExpandableListView) findViewById(R.id.ExpList);
+
+        }
+
+    }
 
 
 }

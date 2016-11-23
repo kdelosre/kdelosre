@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="150"
+    >
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar5"
+            android:background="#b30000"
+            android:layout_margin="25dp"/>
+
+        <TextView
+            android:text="Agenda"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:textColor="#b30000"
+            android:textSize="20dp" />
+
+        <Button
+            android:text="Topic 1                              ~30 mins."
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#FF616161"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Comment/Ask"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4" />
+
+        <Button
+            android:text="Notes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5" />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="textPersonName"
+            android:text="Enter Text: "
+            android:padding="10dp"
+            android:background="#9e9e9e"
+            android:textColor="#FFFFFF"
+            android:ems="10"
+            android:id="@+id/editText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d7d7d7d7"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Anonymous"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="20dp"
+            android:id="@+id/textView16" />
+
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleButton2" />
+
+    </LinearLayout>
+
+        <TextView
+            android:text="Bob: My team is ahead of schedule on completing this task."
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#750606"
+            android:textColor="#FFFFFF"
+            android:id="@+id/textView19" />
+
+        <TextView
+            android:text="Anonymous: Can someone post the full report up?"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:background="#b30000"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18" />
+
+        <TextView
+            android:text="Sam: Just uploaded the report under files."
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#750606"
+            android:textColor="#FFFFFF"
+            android:id="@+id/textView19" />
+
+        <Button
+            android:text="Topic 2                              ~20 mins."
+            android:background="#FF616161"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3" />
+
+        <Button
+            android:text="Topic 3                              ~15 mins."
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#FF616161"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3" />
+
+        <ExpandableListView
+            android:id="@+id/ExpList"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:divider="#b30000"
+            android:dividerHeight="5dp"
+            android:groupIndicator="@null" />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
