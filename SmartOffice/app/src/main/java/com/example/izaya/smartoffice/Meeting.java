@@ -13,16 +13,24 @@ public class Meeting {
 
     private long id;
     private String name;
-    private String title;
     private String description;
     private long plnStart;
     private long plnEnd;
     private long actStart;
     private long actEnd;
-    private ArrayList<User> members = new ArrayList();
+    private ArrayList<User> meetingMembers = new ArrayList();
     private ArrayList<Topic> agendaTopics = new ArrayList();
 //    private meetingDashboard = new Dashboard(); //uncomment when Dashboard class is made
 
+//    public Meeting(long meetingId, String name, String description, long plnStart, long plnEnd, long actStart, long actEnd) {
+//        this.id = meetingId;
+//        this.name = name;
+//        this.description = description;
+//        this.plnStart = plnStart;
+//        this.plnEnd = plnEnd;
+//        this.actStart = actStart;
+//        this.actEnd = actEnd;
+//    }
     public Meeting(long meetingId, String name) {
         this.id = meetingId;
         this.name = name;
@@ -33,6 +41,11 @@ public class Meeting {
     }
 
     private void inviteMembers() {
+        // for every selected member in the list of all Members (access list from database),
+//           add to meetingMembers list
+//           return meeting member list
+        ArrayList<User> selected = new ArrayList();
+//        for
 
     }
 

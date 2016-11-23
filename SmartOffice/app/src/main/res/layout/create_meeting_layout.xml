@@ -1,197 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="150"
+    android:layout_margin="10dp">
 
-    <TextView
-        android:text="Name"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView8"
-        android:layout_marginStart="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:id="@+id/meetingName"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:layout_below="@+id/textView8"
-        android:layout_alignStart="@+id/textView8" />
+        <TextView
+            android:text="Title"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:textColor="#b30000"
+            android:textSize="20dp" />
 
-    <TextView
-        android:text="Description"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView9"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/meetingName"
-        android:layout_alignStart="@+id/meetingName" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:textColor="#FFFFFF"
+            android:background="#750606"
+            android:paddingLeft="10dp"
+            android:id="@+id/meetingTitle" />
 
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:inputType="date"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:ems="10"
-        android:id="@+id/meetingDate"
-        android:layout_below="@+id/textView11"
-        android:layout_alignStart="@+id/textView11" />
+        <TextView
+            android:text="Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:textColor="#b30000"
+            android:textSize="20dp"
+            android:paddingTop="10dp" />
 
-    <TextView
-        android:text="Date"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:onClick="onPickDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:id="@+id/textView11"
-        android:layout_below="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textColor="#FFFFFF"
+            android:background="#750606"
+            android:paddingLeft="10dp"
+            android:id="@+id/meetingDescription" />
 
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:inputType="time"
-        android:ems="10"
-        android:id="@+id/editText6"
-        android:layout_marginEnd="15dp"
-        android:layout_alignTop="@+id/meetingDate"
-        android:layout_alignParentEnd="true" />
+        <TextView
+            android:text="Date"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/testingDate"
+            android:textColor="#b30000"
+            android:textSize="20dp"
+            android:paddingTop="10dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/textView9"
-        android:layout_alignStart="@+id/textView9" />
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:text="Time"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText6"
-        android:layout_alignStart="@+id/editText6"
-        android:id="@+id/textView12" />
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:onClick="onPickDateClick"
+                android:ems="10"
+                android:textColor="#FFFFFF"
+                android:background="#750606"
+                android:paddingLeft="10dp"
+                android:id="@+id/meetingDate" />
 
-    <TextView
-        android:text="Location"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/meetingDate"
-        android:id="@+id/textView13" />
+            <Button
+                android:id="@+id/btn_date"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:onClick="onSetDate"
+                android:background="#b30000"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="right"
+                android:text="Set Date"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:ems="10"
-        android:layout_below="@+id/textView13"
-        android:layout_alignStart="@+id/textView13"
-        android:id="@+id/editText7" />
-
-    <TextView
-        android:text="Agendas"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText7"
-        android:layout_alignStart="@+id/editText7"
-        android:layout_marginTop="10dp"
-        android:id="@+id/textView14" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:ems="10"
-        android:layout_below="@+id/textView14"
-        android:layout_alignEnd="@+id/editText7"
-        android:id="@+id/editText8" />
-
-    <TextView
-        android:text="Upload Files"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText8"
-        android:layout_alignStart="@+id/editText8"
-        android:layout_marginTop="11dp"
-        android:id="@+id/textView15" />
-
-    <Button
-        android:text="Upload"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/textView15"
-        android:layout_alignStart="@+id/textView15"
-        android:id="@+id/button2" />
-
-    <TextView
-        android:text="Invite Members"
-        android:textColor="#b30000"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView16" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:textColor="#FFFFFF"
-        android:background="#750606"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:layout_below="@+id/textView16"
-        android:layout_alignStart="@+id/textView16"
-        android:id="@+id/editText9" />
-
-    <Button
-        android:text="Create  Meeting"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textColor="#FFFFFF"
-        android:background="#b30000"
-        android:layout_alignTop="@+id/editText9"
-        android:layout_toEndOf="@+id/meetingDate"
-        android:id="@+id/button4" />
+        </LinearLayout>
 
 
-</RelativeLayout>
+        <TextView
+            android:text="Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:textColor="#b30000"
+            android:textSize="20dp"
+            android:paddingTop="10dp" />
+
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_weight="0.5"
+                android:textColor="#FFFFFF"
+                android:background="#750606"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="left"
+                android:id="@+id/meetingTime" />
+
+            <Button
+                android:id="@+id/btn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:onClick="onSetTime"
+                android:background="#b30000"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="right"
+                android:text="Set Time"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:text="Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            android:textColor="#b30000"
+            android:textSize="20dp"
+            android:paddingTop="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textColor="#FFFFFF"
+            android:background="#750606"
+            android:paddingLeft="10dp"
+            android:id="@+id/meetingLocation" />
+
+        <TextView
+            android:text="Agenda Topics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            android:textColor="#b30000"
+            android:textSize="20dp"
+            android:paddingTop="10dp" />
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:textColor="#FFFFFF"
+                android:background="#750606"
+                android:paddingLeft="10dp"
+                android:id="@+id/meetingTopics" />
+
+            <Button
+                android:id="@+id/addTopic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:onClick="onAddTopicClick"
+                android:layout_gravity="center"
+                android:background="#b30000"
+                android:textColor="#FFFFFF"
+                android:text="+"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView15"
+            android:textColor="#b30000"
+            android:textSize="20dp"
+            android:paddingTop="10dp" />
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/uploadFile"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:onClick="onUploadFileClick"
+                android:background="#b30000"
+                android:textColor="#FFFFFF"
+                android:text="Upload Files"/>
+
+            <Button
+                android:id="@+id/addFile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:onClick="onAddFileClick"
+                android:layout_gravity="center"
+                android:background="#b30000"
+                android:textColor="#FFFFFF"
+                android:text="+"
+                android:textSize="20dp"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Invite Members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:textColor="#b30000"
+            android:textSize="20dp"
+            android:paddingTop="10dp" />
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:textColor="#FFFFFF"
+                android:background="#750606"
+                android:paddingLeft="10dp"
+                android:id="@+id/meetingMembers" />
+
+            <Button
+                android:id="@+id/addMember"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:onClick="onAddMemberClick"
+                android:background="#b30000"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:text="+"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/createDashboard"
+            android:inputType="textPersonName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onCreateDashboardClick"
+            android:background="#b30000"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="25dp"
+            android:text="CREATE MEETING"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

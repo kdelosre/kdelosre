@@ -1,9 +1,12 @@
 package com.example.izaya.smartoffice;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +17,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.app.FragmentManager;
+import android.widget.DatePicker;
+import android.widget.TextView;
+import android.widget.TimePicker;
+
+import java.util.Calendar;
+import java.util.Date;
 
 
 public class MainActivity extends AppCompatActivity
@@ -28,7 +37,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -118,8 +127,96 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    public void onCreateDashboardClick(View v) {
+        if (v.getId() == R.id.createDashboard) {
+            FragmentManager fm = getFragmentManager();
+            fm.beginTransaction()
+                    .replace(R.id.content_frame
+                            , new CreateMeetingDashboard())
+                    .commit();
+            // for v4 version of fragment
+//            getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.content_frame, new CreateMeetingDashboard())
+//                    .commit();
+//        }
+        }
+
+    }
+
     //on click pop up date picker
-//    public void onPickDate() {
-//
-//    }
+    public void onSetDate(View v) {
+
+        if (v.getId() == R.id.btn_date){
+
+            // Get Current Date
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this,
+                    new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+
+                            TextView meetingDate = (TextView) findViewById(R.id.meetingDate);
+                            meetingDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    }, year, month, day);
+            datePickerDialog.show();
+
+        }
+     }
+
+    //on click pop up time picker
+    public void onSetTime(View v) {
+
+        if (v.getId() == R.id.btn_time) {
+
+            // Get Current time
+            final Calendar c = Calendar.getInstance();
+            int hour = c.get(Calendar.HOUR_OF_DAY);
+            int minute = c.get(Calendar.MINUTE);
+
+
+            TimePickerDialog timePickerDialog = new TimePickerDialog(MainActivity.this,
+                    new TimePickerDialog.OnTimeSetListener() {
+
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay,
+                                              int minute) {
+                            TextView meetingTime = (TextView) findViewById(R.id.meetingTime);
+                            meetingTime.setText(hourOfDay + ":" + minute);
+                        }
+                    }, hour, minute, false);
+            timePickerDialog.show();
+        }
+    }
+
+    // on click add edit text field
+    // WIP
+    public void onAddTopicClick(View v) {
+
+        if (v.getId() == R.id.addTopic) {
+
+        }
+
+    }
+
+    //on click add upload file button
+    //WIP
+    public void onAddFileClick(View v) {
+
+        if (v.getId() == R.id.addFile) {
+
+        }
+
+    }
+
+
+
 }

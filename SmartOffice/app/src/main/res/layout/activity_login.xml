@@ -66,18 +66,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="12dp" />
 
-    <TextView
-        android:text="SMART OFFICE ASSISTANT"
-        android:gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textSize="28sp"
-        android:textColor="#b30000"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,6 +74,16 @@
         android:layout_marginTop="23dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="SMART OFFICE ASSISTANT"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="28sp"
+        android:textColor="#b30000"
+        android:layout_below="@+id/imageView2" />
 
 
 </RelativeLayout>
