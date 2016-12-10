@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio</title>
+		
+		<link rel="stylesheet" type="text/css" href="./css/portfolio.css"/>
+		<meta charset="UTF-8">
+		<meta name="author" content="Kirstie Delos Reyes">
+		
+	</head>
+	<body>
+		<nav>
+			Navigation: 
+			<a href="home.html">Home</a> |
+			<a href="aboutme.html">About Me</a> |
+			<a href="portfolio.html">Porfolio</a>|
+			<a href="contactme.html">Contact Me</a>
+		</nav>
+		<div id="navi"></div>
+		<p>Welcome! This page displays a portfolio of what projects and artwork I have done in the past.
+		I hope you enjoy these as much as I did them!</p>
+
+		<h3>Projects</h3>
+
+		<table>
+			<tr>
+				<th>WEAVE 1.0 Application Prototype: March'16-June'16</th>
+				<td>Collaborated with a team to create/design a working prototype for an
+					intimate photo collaborative and story sharing Android application for a
+					set of clients.
+					Coded application in Java using Android Studio, created design
+					documents, and designed a showcase poster for the project</td>
+			</tr>
+			<tr>
+				<th>Spring Game Jam Project: April '16</th>
+				<td>Primary artist and animator for a weekend game jam
+					Created concept art/designs, animations, and background, and helped
+					design an arcade-style game with a team using the Tobii EyeX Controller</td>
+			</tr>
+			<tr>
+				<th>Online Question Aggregator: Jan'16-March'16</th>
+				<td>Collaborated with a team to create/design an online question aggregator
+					designed to input and display anon questions for an instructor to answer
+					Created graphic designs/logos and product mockups for the project</td>
+			</tr>
+			<tr>
+				<th>Human Computer Interaction Design Project: Jan'15-March'15</th>
+				<td>Designed a human computer interaction project with a team geared
+					towards a system to find and create manageable study/work places
+					Created product prototypes and, did research, data evaluation,
+					storyboards</td>
+			</tr>
+		</table>
+
+		<h3>Artwork</h3>
+
+		<div>
+			<div class="thumbnails">
+				<img onmouseover="getElementById('preview').src=getElementById('img1').src" id="img1" src="./img/tumblr_myrq12vXV71r2g2f7o1_540.jpg"/>
+				<img onmouseover="getElementById('preview').src=getElementById('img2').src" id="img2" src="./img/tumblr_myx9xaEsH81r2g2f7o1_540.jpg"/>
+				<img onmouseover="getElementById('preview').src=getElementById('img3').src" id="img3" src="./img/tumblr_n05qpmDY2j1tqbeq2o1_540.jpg"/>
+				<img onmouseover="getElementById('preview').src=getElementById('img4').src" id="img4" src="./img/tumblr_n332imSCfv1tqbeq2o1_540.png"/>
+				<img onmouseover="getElementById('preview').src=getElementById('img5').src" id="img5" src="./img/tumblr_nk2ccoX8IR1tqbeq2o1_540.png"/>
+				<img onmouseover="getElementById('preview').src=getElementById('img6').src" id="img6" src="./img/tumblr_nziu01RXe21tqbeq2o1_1280.png"/>
+			</div>
+			<div class="preview">
+			<img id="preview" src="./Img/tumblr_myrq12vXV71r2g2f7o1_540.jpg"/>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!--Reference: http://html-tuts.com/html-photo-gallery-simple-javascript/-->
