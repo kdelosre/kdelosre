@@ -1,0 +1,67 @@
+h1{
+	font-family: Arial;
+	font-size: 3em;
+}
+
+
+#navi{
+	height: 0px;
+	width: 50%;
+	color: white;
+	border-bottom-style: dashed;
+	text-align: center;
+	display: inline-block;
+}
+
+body{
+
+	background: #E0EAFC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #E0EAFC , #CFDEF3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #E0EAFC , #CFDEF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
+	text-align: center;
+	font-family: Arial;
+}
+
+nav{
+	background: #6386bf;
+	border-radius: 15px;
+	width: 500px;
+	margin: auto;
+	height: 50px;
+	line-height: 3.0;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: Century, Arial;
+}
+
+head{
+	display: block;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 600px){
+	img{
+		width: 200px;
+		height: 200px;
+	}
+
+}
+
+@media screen and (max-width: 525px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+}
+@media screen and (max-width: 356px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+	h1{
+		font-size: 2em;
+	}
+}

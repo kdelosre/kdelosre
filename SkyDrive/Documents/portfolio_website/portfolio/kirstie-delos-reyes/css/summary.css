@@ -1,0 +1,94 @@
+
+
+body {
+	background: #E0EAFC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #E0EAFC , #CFDEF3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #E0EAFC , #CFDEF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
+	text-align: center;
+	font-family: Arial;
+}
+
+#navi{
+	height: 0px;
+	width: 50%;
+	color: white;
+	border-bottom-style: dashed;
+	text-align: center;
+	display: inline-block;
+}
+
+.Para{
+	text-align: justify;
+	width: 800px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+img{
+	width: 50%;
+	height: 50%;
+}
+
+h3{
+	margin-top: 50px;
+}
+h2{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+}
+nav{
+	background: #6386bf;
+	border-radius: 15px;
+	width: 500px;
+	margin: auto;
+	height: 50px;
+	line-height: 3.0;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: Century, Arial;
+}
+table{
+	margin: auto;
+	border: 2px solid black;
+}
+th{
+	height: 75px;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}
+td{
+	border-bottom: 2px solid black;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 600px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+	.preview img{
+		width: 75%;
+		height: 75%;
+	}
+}
+
+@media screen and (max-width: 525px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+	.preview img{
+		width: 60%;
+		height: 60%;
+	}
+}
+@media screen and (max-width: 356px){
+	.preview img{
+		width: 50%;
+		height: 50%;
+	}
+}

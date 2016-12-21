@@ -1,0 +1,116 @@
+
+#navi{
+	height: 0px;
+	width: 50%;
+	color: white;
+	border-bottom-style: dashed;
+	text-align: center;
+	display: inline-block;
+}
+body {
+	background: #E0EAFC; 
+	background: -webkit-linear-gradient(to left, #E0EAFC , #CFDEF3); 
+	background: linear-gradient(to left, #E0EAFC , #CFDEF3);     
+	text-align: center;
+	font-family: Arial;
+}
+article{
+	text-align: justify;
+	width: 600px;
+	margin: auto;
+	margin-bottom: 50px;
+}
+nav{
+	background: #6386bf;
+	border-radius: 15px;
+	width: 500px;
+	margin: auto;
+	height: 50px;
+	line-height: 3.0;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+button.expand {
+    background-color: #6386bf;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 545px;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.7s;
+    font-size: 20px;
+
+}
+
+button.expand.active, button.expand:hover {
+    background-color: #8fb4bc;
+}
+
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    width: 500px;
+    margin: auto;
+}
+
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 600px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+	article{
+		width: 500px
+	}
+	button.expand{
+		width: 500px;
+	}
+	div.panel{
+		width: 500px;
+	}
+
+}
+@media screen and (max-width: 525px){
+	.query{
+		width: 50%;
+		height: 50%;
+		display: inline-block;
+	}
+	article{
+		width: 400px
+	}
+	button.expand{
+		width:400px;
+	}
+	div.panel{
+		width: 400px;
+	}
+}
+@media screen and (max-width: 356px){
+	article{
+		width: 200px
+	}
+	button.expand{
+		width:200px;
+	}
+	div.panel{
+		width: 200px;
+	}	
+}
