@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bio Page</title>
+		<link rel="stylesheet" type="text/css" href="./css/aboutme.css"/>
+		<meta charset="UTF-8">
+		<meta name="author" content="Kirstie Delos Reyes">	
+	</head>
+	<body>
+		<nav class="query">
+			Navigation: 
+			<a href="home.html">Home</a> |
+			<a href="aboutme.html">About Me</a> |
+			<a href="portfolio.html">Porfolio</a>|
+			<a href="contactme.html">Contact Me</a>
+		</nav>
+		<div id="navi"></div>
+		<h1>About Me</h1>
+		<p>Hey there!</p>
+		<article>This is a page for guess what... ME! I am currently attending the University of California, Irvine working 
+		on a BS in Informatics with a specialization in Human Computer Interaction. I will graduate at the end of the Winter
+		2017 quarter. I aspire to create or build software or something cool with a bunch of people! My hobbies include drawing, lion dancing, hanging out with friends, and playing video games!</article>
+
+		<button class="expand">Skills</button>
+		<div class="panel">
+		  <p>Graphic Design</p>
+		  <p>Mockup Creation</p>
+		  <p>Software/UI Design</p>
+		  <p>Android Development</p>
+		  <p>Storyboards</p>
+		  <p>UML Diagrams</p>
+		  <p>Traditional Art</p>
+		  <p>Digital Art</p>
+		</div>
+
+
+	<script>
+	var skills = document.getElementsByClassName("expand");
+	var i;
+
+	for (i = 0; i < skills.length; i++) {
+	    skills[i].onclick = function(){
+	        this.classList.toggle("active");
+	        this.nextElementSibling.classList.toggle("show");
+	  }
+	}
+	</script>
+	</body>
+</html>
+
+<!-- Reference: http://www.w3schools.com/howto/howto_js_accordion.asp -->
